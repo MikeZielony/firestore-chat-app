@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
+  segment = 'chats';
+
   constructor() { }
 
   ngOnInit() {
@@ -15,4 +17,8 @@ export class HomePage implements OnInit {
     
   }
 
+  onSegmentChanged(event: any) {
+    console.log(event);
+
+}
 }

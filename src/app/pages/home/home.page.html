@@ -1,11 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
     <ion-title>Shum</ion-title>
-   
-   
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar color="primary">
@@ -24,11 +21,19 @@
             </ng-template>
           </ion-popover>
           <ion-button>
-            
          </ion-button>
-          
         </ion-buttons>
-      
     </ion-toolbar>
+    <ion-segment [value]="segment" mode="md" (ionChange)="onSegmentChanged($event)">
+      <ion-segment-button value="status">
+      <ion-label>Status</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="chats">
+      <ion-label>Chats</ion-label>
+    </ion-segment-button>
+      <ion-segment-button value="calls">
+      <ion-label>Calls</ion-label>
+    </ion-segment-button>
+    </ion-segment>
   </ion-header>
 </ion-content>
